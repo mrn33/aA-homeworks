@@ -1,23 +1,23 @@
 class Stack
   def initialize
-    @mr_arr = []
+    @my_arr = []
   end
 
   def push(el)
-    mr_arr.push
+    my_arr.push(el)
     el
   end
 
   def pop
-    mr_arr.pop
+    my_arr.pop
   end
 
   def peek
-    mr_arr.last
+    my_arr.last
   end
 
   private
 
-  attr_reader :mr_arr
+  attr_reader :my_arr
 
 end
