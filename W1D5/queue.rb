@@ -5,8 +5,8 @@ class Queue
   end
 
   def enqueue(el)
-    array.push(el)
-    el
+    array << el
+    self
   end
 
   def dequeue
@@ -17,8 +17,13 @@ class Queue
     array.first
   end
 
+  def show
+    array.dup
+  end
+  
+
   private
 
   attr_reader :array
-  
+
 end

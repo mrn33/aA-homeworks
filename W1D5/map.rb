@@ -1,5 +1,5 @@
 class Map
-  
+
   def initialize
     @my_map = []
   end
@@ -30,14 +30,15 @@ class Map
 
 
   def show
-    deep_dup(my_map)
+    my_map.dup
   end
 
   attr_reader :my_map
 
-  def deep_dup(arr)
-    arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
-  end
+  # def deep_dup(arr)
+  #   arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
+  # end
+
 
 
 end

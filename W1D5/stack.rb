@@ -4,8 +4,8 @@ class Stack
   end
 
   def push(el)
-    my_arr.push(el)
-    el
+    my_arr << el
+    self
   end
 
   def pop
@@ -16,6 +16,10 @@ class Stack
     my_arr.last
   end
 
+  def inspect
+    "#<stack:#{self.object_id} top=#{peek}>"
+  end
+  
   private
 
   attr_reader :my_arr
