@@ -26,26 +26,20 @@ class Simon
       round_success_message
       @sequence_length += 1
     end
+
   end
 
   def show_sequence
     add_random_color
     @seq.each do |color|
       p color
-      sleep 0.75
-      system("clear")
-      sleep 0.25
     end
   end
 
   def require_sequence
     @seq.each do |color|
       user_color = gets.chomp
-
-      if color[0] != user_color
-        @game_over = true
-        
-      end
+      @game_over = true unless color[0] == user_color
     end
   end
 
@@ -54,11 +48,9 @@ class Simon
   end
 
   def round_success_message
-    p "Won Round, here's the next sequence:"
   end
 
   def game_over_message
-    p "Game Over ! you made it #{sequence_length - 1} rounds..."
   end
 
   def reset_game
